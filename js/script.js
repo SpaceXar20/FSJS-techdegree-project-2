@@ -44,7 +44,9 @@ of list items by the max number of items per page*/
     pageDiv.append(ul);
     
     
-    //Add (li) and (a) tags to every page using a for loop
+    // f​or​ every page
+// add l​i​ and ​a​ tags with the page number text
+
     //Did I do the for loop right??? I feel like I am missing something
     for (let index = 0; index < pagesNumber.length; index++) {
         unorderedL = document.createElement('ul');
