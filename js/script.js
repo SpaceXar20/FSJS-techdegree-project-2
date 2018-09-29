@@ -40,14 +40,18 @@ of list items by the max number of items per page*/
     pageDiv = document.createElement('div');
     pageDiv.className = 'pagination';
     pageDiv.appendTo('.page');
+    // add a ul to the “pagination” div
     pageDiv.append(ul);
     
     
-    
-    
-    unorderedL = document.createElement('ul');
+    //Add (li) and (a) tags to every page using a for loop
+    for (let index = 0; index < pagesNumber.length; index++) {
+        unorderedL = document.createElement('ul');
     lI = document.createElement('li');
     a = document.createElement('a');
+        
+    }
+    
 }
 
 // Add functionality to the pagination buttons so that they show and hide the correct items
