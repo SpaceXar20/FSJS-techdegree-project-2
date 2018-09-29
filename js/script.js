@@ -41,18 +41,34 @@ of list items by the max number of items per page*/
     pageDiv.className = 'pagination';
     pageDiv.appendTo('.page');
     // add a ul to the “pagination” div
+    unorderedL = document.createElement('ul');
     pageDiv.append(ul);
     
     
     // f​or​ every page
 // add l​i​ and ​a​ tags with the page number text
-
-    //Did I do the for loop right??? I feel like I am missing something
-    for (let index = 0; index < pagesNumber.length; index++) {
-        unorderedL = document.createElement('ul');
+    for (let i = 0; i < pagesNumber.length; i++) {
+        
     lI = document.createElement('li');
     a = document.createElement('a');
+    
+    /*
+    add an event listener to each a​ ​ tag, or add an event listener to the pagination div,
+and use event delegation to target the a tags to define what happens they are clicked
+    */
+    document.querySelector('pageDiv').addEventListener('click')
+
+     // calls the showPage function to display the appropriate page
+        ShowPage();
+
+     // loop over pagination links to remove active class from all
+      for (let i= 0; i < appendPageLinks.length; i++) {
         
+     
+     /* add the active class to the link that was just clicked, otherwise known as the
+event.target*/
+          
+      }  
     }
     
 }
