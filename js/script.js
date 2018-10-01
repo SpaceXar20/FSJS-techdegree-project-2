@@ -8,8 +8,16 @@ const list = document.querySelector('ul');
 const numberOfStudents = list.children;
 const studentsAnyNumber = 10;
 const selectSearchBox = document.querySelector('.student-search');
+const buttonDiv = document.createElement('ul');
+// create a d​ iv​, give it the “pagination” class, and append it to the .page div // add a   to the “pagination” div
+const pageDiv = document.createElement('div');
+pageDiv.className = 'pagination';
+pageDiv.append('.page');
+// add a ul to the “pagination” div
+unorderedL = document.createElement('ul');
+pageDiv.append(unorderedL);
 
-const buttonUl = document.querySelector('.pagination ul');
+const buttonUl = buttonDiv.querySelector('.pagination ul');
 const zeroResults = document.querySelector('.no-result');
 
 // this function displays the amount of pages based on how many students there are in total
@@ -51,7 +59,7 @@ for (let i = 1; i <= totalNumberOfPages.length; i++) {
     li.appendChild(pageLinks);
 }
 
-buttonUl.addEventListener('click',(event) => {
+buttonDiv.addEventListener('click',(event) => {
     zeroResults.innerHTML = '';
     let buttonsNumber = parseInt(event.target.textContent);
     let maximum = buttonsNumber * 10;
