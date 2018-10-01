@@ -8,8 +8,8 @@ const list = document.querySelector('ul');
 const numberOfStudents = list.children;
 const studentsAnyNumber = 10;
 const selectSearchBox = document.querySelector('.student-search');
-const buttonDiv = document.querySelector('.pagination');
-const buttonUl = buttonDiv.querySelector('ul');
+
+const buttonUl = buttonDiv.querySelector('.pagination ul');
 const zeroResults = document.querySelector('.no-result');
 
 // this function displays the amount of pages based on how many students there are in total
@@ -70,4 +70,4 @@ buttonDiv.addEventListener('click',(event) => {
 totalNumberOfPages();
 
 //This function displays the search box
-showSearchBox();
+showSearchBox90;
