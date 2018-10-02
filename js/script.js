@@ -18,7 +18,7 @@ unorderedL = document.createElement('ul');
 pageDiv.append(unorderedL);
 
 const buttonUl = buttonDiv.querySelector('.pagination ul');
-const zeroResults = document.querySelector('.no-result');
+const zeroResults = document.querySelector('.zero-result');
 
 // this function displays the amount of pages based on how many students there are in total
 const totalNumberOfPages = () => {
