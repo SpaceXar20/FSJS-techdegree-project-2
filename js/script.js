@@ -52,7 +52,7 @@ const showSearchBox = () => {
 for (let i = 1; i <= totalNumberOfPages.length; i++) {
   let li = document.createElement('li');
   let pageLinks = document.createElement('a');
-    li.className = 'active';
+    pageLinks.className = 'active';
     pageLinks.href = '#';
     pageLinks.textContent = i;
     buttonUl.appendChild(li);
