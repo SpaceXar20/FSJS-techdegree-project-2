@@ -9,10 +9,11 @@ const numberOfStudents = list.children;
 const studentsAnyNumber = 10;
 const selectSearchBox = document.querySelector('.student-search');
 const buttonDiv = document.createElement('ul');
+let page = document.querySelector('.page'); //select page class in variable
 // create a d​ iv​, give it the “pagination” class, and append it to the .page div // add a   to the “pagination” div
 const pageDiv = document.createElement('div');
 pageDiv.className = 'pagination';
-pageDiv.append('.page');
+page.appendChild('pageDiv');
 // add a ul to the “pagination” div
 unorderedL = document.createElement('ul');
 pageDiv.append(unorderedL);
@@ -22,7 +23,7 @@ const zeroResults = document.querySelector('.zero-result');
 
 // this function displays the amount of pages based on how many students there are in total
 const totalNumberOfPages = () => {
-    let pageNumbers = Math.floor(numberOfStudents.length /studentsAnyNumber);
+    let pageNumbers = Math.ceil(numberOfStudents.length /studentsAnyNumber);
     return pageNumbers;
 }
 
