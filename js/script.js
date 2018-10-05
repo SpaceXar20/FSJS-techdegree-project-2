@@ -9,11 +9,11 @@ const numberOfStudents = list.children;
 const studentsAnyNumber = 10;
 const selectSearchBox = document.querySelector('.student-search');
 const buttonDiv = document.createElement('ul');
-let page = document.querySelector('.page'); //select page class in variable
+let page = document.body.querySelector('.page'); //select page class in variable
 // create a d​ iv​, give it the “pagination” class, and append it to the .page div // add a   to the “pagination” div
 const pageDiv = document.createElement('div');
 pageDiv.className = 'pagination';
-page.appendChild('pageDiv');
+page.appendChild(pageDiv)
 // add a ul to the “pagination” div
 unorderedL = document.createElement('ul');
 pageDiv.append(unorderedL);
