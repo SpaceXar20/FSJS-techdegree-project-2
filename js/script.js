@@ -18,7 +18,7 @@ page.appendChild(pageDiv)
 unorderedL = document.createElement('ul');
 pageDiv.append(unorderedL);
 
-const buttonUl = buttonDiv.querySelector('.pagination ul');
+const buttonUl = document.querySelector('.pagination ul');
 const zeroResults = document.querySelector('.zero-result');
 
 // this function displays the amount of pages based on how many students there are in total
@@ -59,7 +59,7 @@ for (let i = 1; i <= totalNumberOfPages(); i++) {
     buttonUl.appendChild(li);
     li.appendChild(pageLinks);
 }
-
+console.log(totalNumberOfPages);
 buttonDiv.addEventListener('click',(event) => {
     zeroResults.innerHTML = '';
     let buttonsNumber = parseInt(event.target.textContent);
