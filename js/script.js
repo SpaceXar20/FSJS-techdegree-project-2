@@ -50,7 +50,7 @@ const showSearchBox = () => {
 }  
 
 //this (for) loop divides students pages
-for (let i = 1; i <= totalNumberOfPages.length; i++) {
+for (let i = 1; i <= totalNumberOfPages(); i++) {
   let li = document.createElement('li');
   let pageLinks = document.createElement('a');
     pageLinks.className = 'active';
