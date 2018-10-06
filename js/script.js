@@ -23,9 +23,10 @@ const zeroResults = document.querySelector('.zero-result');
 
 // this function displays the amount of pages based on how many students there are in total
 const totalNumberOfPages = () => {
-    let pageNumbers = Math.ceil(numberOfStudents.length /studentsAnyNumber);
+    let pageNumbers = Math.ceil(numberOfStudents.length / studentsAnyNumber);
     return pageNumbers;
 }
+console.log(totalNumberOfPages);
 
 //This functions makes it so that 10 students are displayed
 const tenStudents = () => {
@@ -38,6 +39,7 @@ const tenStudents = () => {
         
     }
 }
+console.log(tenStudents);
 
 //This functions displays the box to search for students
 let searchBox = document.createElement('input');
@@ -48,6 +50,7 @@ const showSearchBox = () => {
     selectSearchBox.appendChild(searchBox);
     selectSearchBox.appendChild(button);
 }  
+console.log(showSearchBox);
 
 //this (for) loop divides students pages
 for (let i = 1; i <= totalNumberOfPages(); i++) {
@@ -59,7 +62,7 @@ for (let i = 1; i <= totalNumberOfPages(); i++) {
     buttonUl.appendChild(li);
     li.appendChild(pageLinks);
 }
-console.log(totalNumberOfPages);
+
 buttonDiv.addEventListener('click',(event) => {
     zeroResults.innerHTML = '';
     let buttonsNumber = parseInt(event.target.textContent);
