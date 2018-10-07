@@ -3,11 +3,14 @@ Treehouse Techdegree:
 FSJS project 2 - List Filter and Pagination
 ******************************************/
 
-// variables for project
-const list = document.querySelector('ul');
+// this variable selects the ul with queryselector
+const list = document.querySelector('ul'); 
 const numberOfStudents = list.children;
+//I made a variable hold the number 10 to later display 10 students
 const studentsAnyNumber = 10;
+//Selects student-search class 
 const selectSearchBox = document.querySelector('.student-search');
+//I create a (ul) element
 const buttonDiv = document.createElement('ul');
 let page = document.body.querySelector('.page'); //select page class in variable
 // create a d​ iv​, give it the “pagination” class, and append it to the .page div // add a   to the “pagination” div
@@ -55,19 +58,19 @@ console.log(showSearchBox);
 //this (for) loop divides students pages
 for (let i = 1; i <= totalNumberOfPages(); i++) {
   let li = document.createElement('li');
-  let pageLinks = document.createElement('a');
-    pageLinks.className = 'active';
-    pageLinks.href = '#';
-    pageLinks.textContent = i;
+  let a = document.createElement('a');
+    a.className = 'active';
+    a.href = '#';
+    a.textContent = i;
     buttonUl.appendChild(li);
-    li.appendChild(pageLinks);
+    li.appendChild(a);
 }
-
-buttonDiv.addEventListener('click',(event) => {
+//Add interactivity to navigational buttons
+buttonUl.addEventListener('click',(event) => {
     zeroResults.innerHTML = '';
     let buttonsNumber = parseInt(event.target.textContent);
     let maximum = buttonsNumber * 10;
-    let minimum = max - 10;
+    let minimum = maximum - 10;
     for (let i = 0; i < numberOfStudents.length; i++) {
        if (i >= minimum && i < maximum) {
            numberOfStudents[i].style.display = '';
