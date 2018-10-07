@@ -31,7 +31,7 @@ const totalNumberOfPages = () => {
 }
 console.log(totalNumberOfPages);
 
-//This functions makes it so that 10 students are displayed
+//This functions makes it so that 10 students are displayed when the page loads for the first time
 const tenStudents = () => {
     for (let i = 0; i < numberOfStudents.length; i++) {
         if (i < studentsAnyNumber) {
@@ -86,3 +86,6 @@ totalNumberOfPages();
 
 //This function displays the search box
 showSearchBox();
+
+//This function displays 10 students when the page loads for the first time
+tenStudents();
