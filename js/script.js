@@ -20,7 +20,6 @@ page.appendChild(pageDiv)
 // add a ul to the “pagination” div
 unorderedL = document.createElement('ul');
 pageDiv.append(unorderedL);
-
 const buttonUl = document.querySelector('.pagination ul');
 const zeroResults = document.querySelector('.zero-result');
 
@@ -53,6 +52,15 @@ const showSearchBox = () => {
     selectSearchBox.appendChild(searchBox);
     selectSearchBox.appendChild(button);
 }  
+
+//Enabling live search 
+//this variable will be used in a function below to enable live search
+const searchArray = []
+const liveSearch = () => {
+    return searchArray.filter() 
+        const regex = new RegExp('gi');
+    
+}
 
 
 //this (for) loop divides students pages
