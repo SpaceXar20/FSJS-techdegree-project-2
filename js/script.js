@@ -58,7 +58,7 @@ const showSearchBox = () => {
 const searchArray = []
 const liveSearch = () => {
     return searchArray.filter() 
-        const regex = new RegExp('gi');
+       
     
 }
 
